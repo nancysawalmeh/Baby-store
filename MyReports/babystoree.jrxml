@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="babystoree" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0eb75377-2270-47c7-af1b-358027d2975d">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="babystore"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[select * from bill]]>
+	</queryString>
+	<field name="BILL_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="BILL_ID"/>
+	</field>
+	<field name="BILL_NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BILL_NAME"/>
+	</field>
+	<field name="BILL_DATE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BILL_DATE"/>
+	</field>
+	<field name="PAYMENT" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="PAYMENT"/>
+	</field>
+	<field name="DESCOUNT" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="DESCOUNT"/>
+	</field>
+	<variable name="BILL_ID1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{BILL_ID}]]></variableExpression>
+	</variable>
+	<variable name="PAYMENT1" class="java.lang.Double" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{PAYMENT}]]></variableExpression>
+	</variable>
+	<title>
+		<band height="90">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-30" width="595" height="110" backcolor="#4394BF" uuid="8760d076-22d7-4efa-872f-2aa04db3311e"/>
+				<staticText>
+					<reportElement x="341" y="80" width="250" height="25" forecolor="#FFFFFF" uuid="5c328097-eacf-4c65-b3e4-bf5be552ddeb"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Serif" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Sales for Baby store Application]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="9" width="242" height="61" forecolor="#FFFFFF" uuid="3319044b-bf0c-4695-9340-926c95a159d4"/>
+					<textElement>
+						<font fontName="Serif" size="32" isBold="true" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Baby Store Sales]]></text>
+				</staticText>
+				<image>
+					<reportElement x="490" y="33" width="50" height="50" uuid="ef2b2101-da3a-492d-a340-6b75f351d238"/>
+					<imageExpression><![CDATA[""]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="62">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#080808" backcolor="#FFFFFF" uuid="95661818-73d5-4bb5-bee7-a7f40bcfef7a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9bf8ffba-4b2b-4b11-b028-b34bd73b1909"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BILL_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#080808" backcolor="#FFFFFF" uuid="fbc7f5f4-948d-4197-aba9-ecbf0403e357">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4555ce56-03a2-4c77-a046-c99b8b61a4de"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BILL_NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#080808" backcolor="#FFFFFF" uuid="c692af15-cd67-4f32-a5bf-19d3e9e7054b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd91be4e-5b88-4efe-be65-38394cc94067"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BILL_DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#080808" backcolor="#FFFFFF" uuid="8be53ee8-37a3-4f2b-a647-9b6f2bffd27e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b43348dd-e4e0-4e83-aa34-b83291bfadee"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PAYMENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#080808" backcolor="#FFFFFF" uuid="de991d4e-9835-474e-b914-4de0c4d8f35f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eff483bc-ffb4-46e1-be2b-9fc8316f6a57"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCOUNT]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="10" y="31" width="555" height="19" backcolor="#C9C9C9" uuid="b1beecbb-4330-4e02-969c-3f48454fbd10"/>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="111" height="20" forecolor="#4D96D1" uuid="1c8361d9-ed1a-41eb-b0de-e4245a030f46">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9bf8ffba-4b2b-4b11-b028-b34bd73b1909"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BILL_ID}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="111" y="0" width="111" height="20" forecolor="#4D96D1" uuid="6d866fa7-8179-4fa5-8ebd-daeb8b4b45a9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4555ce56-03a2-4c77-a046-c99b8b61a4de"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BILL_NAME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="222" y="0" width="111" height="20" forecolor="#4D96D1" uuid="36086101-4bc7-4794-9adb-c29916558363">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd91be4e-5b88-4efe-be65-38394cc94067"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BILL_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="333" y="0" width="111" height="20" forecolor="#4D96D1" uuid="41930067-5f55-49dc-98bf-0ca35c47bbdb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b43348dd-e4e0-4e83-aa34-b83291bfadee"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PAYMENT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="444" y="0" width="111" height="20" forecolor="#4D96D1" uuid="3e7192af-01c5-4db2-ad4e-f204561c99e7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eff483bc-ffb4-46e1-be2b-9fc8316f6a57"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DESCOUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="151">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="10" y="0" width="180" height="30" forecolor="#320CF0" uuid="96c04822-8890-4bed-a213-206f7e7c422d"/>
+				<textElement textAlignment="Left">
+					<font fontName="Serif" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number of Payment :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="0" width="140" height="30" forecolor="#320CF0" uuid="61771972-a61d-4d14-a068-8f6d7be4adf6"/>
+				<textElement textAlignment="Left">
+					<font fontName="Serif" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Payment :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="0" width="100" height="30" uuid="8d0d54d7-4a14-4243-b848-8dd160839e4f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{BILL_ID1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="0" width="100" height="30" uuid="558c1d83-843f-4087-aa33-9748828dc280"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAYMENT1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="50" width="200" height="30" forecolor="#D156BA" uuid="0e2554b3-246e-4f35-b3c3-cf251a5ae4a2"/>
+				<textElement textAlignment="Left">
+					<font fontName="Serif" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number Of Managers :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="80" width="190" height="30" forecolor="#D156BA" uuid="d3eed9a0-32c0-45d1-99ea-33ed5393754a"/>
+				<textElement textAlignment="Left">
+					<font fontName="Serif" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number Of Products :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="111" width="160" height="30" forecolor="#D156BA" uuid="bf05e0aa-2409-4f89-9c68-a41580363de7"/>
+				<textElement textAlignment="Left">
+					<font fontName="Serif" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number Of Users :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="50" width="100" height="30" uuid="dce92392-d160-4707-9baa-31ccf20ebcc5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="80" width="100" height="30" uuid="23ca2244-3e2d-4c85-a36e-c063074c984c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[18]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="110" width="100" height="30" uuid="992bed83-b301-4451-8ee9-25638685d053"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[8]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
